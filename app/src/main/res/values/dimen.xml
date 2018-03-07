@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="result_text">100dp</dimen>
+
+    <dimen name="o_length">150dp</dimen>
+
+    <dimen name="button_height">75dp</dimen>
+
+    <dimen name="button_width">75dp</dimen>
+
+    <dimen name="margin_between_botton_row">16dp</dimen>
+
+    <dimen name="number">32sp</dimen>
+
+</resources>

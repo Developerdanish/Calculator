@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_View"
+    tools:context="com.my.danish.calculator.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/result_textView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginRight="@dimen/margin_between_botton_row"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center|right"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#fff"
+        android:textSize="75sp" />
+
+    <LinearLayout
+        android:id="@+id/root_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/row_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/clear_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_gray"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="clear_click"
+                    android:text="AC"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/sign_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_gray"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="sign_click"
+                    android:text="+/-"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/raise_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_gray"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="operator_click"
+                    android:text="^"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/divide_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_orange"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="operator_click"
+                    android:text="/"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/seven_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="7"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/eight_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="8"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/nine_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="9"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/product_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_orange"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="operator_click"
+                    android:text="X"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/four_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="4"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/five_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="5"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/six_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="6"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/subtract_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_orange"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="operator_click"
+                    android:text="-"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/one_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/two_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="2"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/three_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="3"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_orange"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="operator_click"
+                    android:text="+"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/zero_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/o_rounded_rectangle"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="number_click"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/point_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_darkgray"
+                    android:gravity="center"
+                    android:onClick="decimal_click"
+                    android:text="."
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number" />
+
+                <TextView
+                    android:id="@+id/equal_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_between_botton_row"
+                    android:background="@drawable/circle_orange"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:onClick="on_equal_click"
+                    android:text="="
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/number"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

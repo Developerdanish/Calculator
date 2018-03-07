@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/dark_gray_button"/>
+
+    <corners android:topLeftRadius="330dp"
+        android:bottomRightRadius="330dp"
+        android:bottomLeftRadius="330dp"
+        android:topRightRadius="330dp"/>
+
+    <size android:height="65dp"
+        android:width="150dp"/>
+
+
+</shape>
